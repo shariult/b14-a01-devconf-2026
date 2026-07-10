@@ -13,8 +13,8 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 1.6rem;
   line-height: 1.8;
-  font-weight: normal;
   color: var(--gray-900);
+  font-weight: 400;
 }
 
 :root {
@@ -66,6 +66,7 @@ a {
 
 .navbar .container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 2.4rem 0;
@@ -98,6 +99,39 @@ a {
 
 /* layout */
 
+.hero {
+  min-height: 90vh;
+  padding: 13.6rem 0 8rem;
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.6) 30%, rgba(0, 0, 0, 0) 70%),
+    linear-gradient(90deg, rgba(0, 0, 0, 0) 42%, rgba(0, 0, 0, 0.88) 87%),
+    url("../img/banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero-title {
+  margin-bottom: 1.6rem;
+}
+.hero-text {
+  color: var(--white);
+  max-width: 65ch;
+  font-size: 2.2rem;
+  line-height: 1.2;
+}
+.hero-cta,
+.hero-cta:link,
+.hero-cta:visited {
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  padding: 2.5rem 6.2rem;
+  margin-top: auto;
+}
 /* styles */
 
 .navbar-list {
