@@ -29,6 +29,7 @@ body {
   --gray-700: #575757;
   --gray-500: #888888;
   --gray-100: #e5e7eb;
+  --gray-50: #f8f9fa;
 
   --border-color: var(--gray-100);
 
@@ -366,7 +367,7 @@ a {
   line-height: 1.9rem;
 }
 .price--muted {
-  background-color: #f8f9fa;
+  background-color: var(--gray-50);
 }
 .price--muted .price-cta,
 .price--muted .price-cta:link,
@@ -389,4 +390,255 @@ a {
 }
 .social-link:hover {
   transform: scale(1.05);
+}
+
+/* ============================================================
+   THE LINEUP — schedule-as-git-history section
+   Depends on the existing global tokens (--blue-900, --blue-700,
+   --blue-500, --blue-300, --blue-100, --blue-50, --gray-700,
+   --border-color, --border-rad, --white) and the .heading-*,
+   .text-muted, .btn / .btn--primary / .btn--ghost utilities.
+   ============================================================ */
+
+.lineup {
+  padding: 12rem 0;
+  background-color: var(--gray-50);
+}
+
+/* ---------- intro ---------- */
+.lineup__intro {
+  max-width: 70rem;
+  margin-bottom: 6rem;
+}
+
+.lineup__eyebrow {
+  color: var(--blue-500);
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+.lineup__intro .heading-2 {
+  margin-bottom: 1.6rem;
+}
+
+.lineup__subtext {
+  font-size: 1.8rem;
+  max-width: 56rem;
+}
+
+.lineup__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.4rem;
+  list-style: none;
+  margin-top: 3.2rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--gray-700);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.lineup__legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+/* ---------- track dots (reuses the speaker-card track taxonomy) ---------- */
+.track-dot {
+  display: inline-block;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.track-dot--aiml {
+  background-color: var(--blue-700);
+}
+.track-dot--frontend {
+  background-color: var(--blue-300);
+}
+.track-dot--cloud {
+  background-color: var(--blue-500);
+}
+.track-dot--security {
+  background-color: var(--blue-900);
+}
+
+/* ---------- branch cards ---------- */
+.lineup__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.4rem;
+}
+
+.branch {
+  background-color: var(--blue-900);
+  border-radius: var(--border-rad);
+  padding: 2.8rem 2.4rem;
+  color: var(--white);
+  transition: transform 0.2s ease-in-out;
+}
+
+.branch:hover {
+  transform: translateY(-4px);
+}
+
+.branch__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.6rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.branch__day {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--blue-50);
+}
+
+.branch__tag {
+  font-family: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
+  font-size: 1.2rem;
+  color: var(--blue-100);
+  background-color: rgba(96, 165, 250, 0.14);
+  padding: 0.3rem 1rem;
+  border-radius: 999px;
+}
+
+.branch__log {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.commit {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  gap: 1rem;
+  align-items: baseline;
+  font-size: 1.4rem;
+}
+
+.commit__hash {
+  font-family: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
+  font-size: 1.2rem;
+  color: var(--blue-300);
+}
+
+.commit__time {
+  font-family: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
+  font-size: 1.2rem;
+  color: var(--blue-50);
+}
+
+.commit__msg {
+  color: var(--white);
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+/* ---------- merge connector (three branches -> one line) ---------- */
+.lineup__connector {
+  position: relative;
+  height: 6rem;
+}
+
+.stem {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 50%;
+  background-color: var(--blue-100);
+}
+
+.stem--1 {
+  left: 16.66%;
+}
+.stem--2 {
+  left: 50%;
+}
+.stem--3 {
+  left: 83.33%;
+}
+
+.bar {
+  position: absolute;
+  top: 50%;
+  left: 16.66%;
+  right: 16.66%;
+  height: 2px;
+  background-color: var(--blue-100);
+}
+
+.stem--merge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 50%;
+  background-color: var(--blue-100);
+}
+
+/* ---------- merge banner / CTA ---------- */
+.merge-banner {
+  text-align: center;
+  background-color: rgba(37, 99, 235, 0.06);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-rad);
+  padding: 4rem 3.2rem;
+}
+
+.merge-banner__cmd {
+  font-family: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--blue-900);
+  margin-bottom: 1rem;
+}
+
+.merge-banner__note {
+  margin-bottom: 2.8rem;
+}
+
+.merge-banner__cta {
+  display: flex;
+  justify-content: center;
+  gap: 1.6rem;
+  flex-wrap: wrap;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width: 900px) {
+  .lineup__grid {
+    grid-template-columns: 1fr;
+  }
+  .lineup__connector {
+    display: none;
+  }
+  .merge-banner {
+    margin-top: 2.4rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .lineup {
+    padding: 8rem 0;
+  }
+  .merge-banner__cta {
+    flex-direction: column;
+  }
+  .merge-banner__cta .btn {
+    width: 100%;
+    text-align: center;
+  }
 }

@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/style.css" />
@@ -201,6 +201,171 @@
       </div>
     </section>
     <!-- pricing section end -->
+
+    <!-- lineup start -->
+    <section class="lineup">
+      <div class="container">
+        <div class="lineup__intro">
+          <p class="heading-5 lineup__eyebrow">The Lineup</p>
+          <h2 class="heading-2">Three days. One release.</h2>
+          <p class="text-muted lineup__subtext">
+            Every session is a commit. Every day, a branch. By the closing
+            keynote, it all merges into what you'll build next.
+          </p>
+
+          <ul class="lineup__legend">
+            <li><span class="track-dot track-dot--aiml"></span>AI / ML</li>
+            <li><span class="track-dot track-dot--frontend"></span>Frontend</li>
+            <li>
+              <span class="track-dot track-dot--cloud"></span>Cloud &amp; DevOps
+            </li>
+            <li><span class="track-dot track-dot--security"></span>Security</li>
+          </ul>
+        </div>
+
+        <div class="lineup__grid">
+          <!-- DAY 01 -->
+          <article class="branch">
+            <header class="branch__head">
+              <span class="branch__day">Day 01</span>
+              <span class="branch__tag">main</span>
+            </header>
+            <ol class="branch__log">
+              <li class="commit">
+                <span class="commit__hash">a1f9c3</span>
+                <span class="commit__time">09:00</span>
+                <p class="commit__msg">
+                  Keynote — The State of Software in 2026
+                </p>
+              </li>
+              <li class="commit">
+                <span class="commit__hash">b2e871</span>
+                <span class="commit__time">10:30</span>
+                <p class="commit__msg">
+                  <span class="track-dot track-dot--aiml"></span>Fine-Tuning at
+                  the Edge
+                </p>
+              </li>
+              <li class="commit">
+                <span class="commit__hash">c39a04</span>
+                <span class="commit__time">13:00</span>
+                <p class="commit__msg">
+                  <span class="track-dot track-dot--frontend"></span>Building
+                  Without a Framework
+                </p>
+              </li>
+              <li class="commit">
+                <span class="commit__hash">d8f21e</span>
+                <span class="commit__time">15:00</span>
+                <p class="commit__msg">
+                  <span class="track-dot track-dot--security"></span>Zero Trust,
+                  Zero Excuses
+                </p>
+              </li>
+            </ol>
+          </article>
+
+          <!-- DAY 02 -->
+          <article class="branch">
+            <header class="branch__head">
+              <span class="branch__day">Day 02</span>
+              <span class="branch__tag">feature/workshops</span>
+            </header>
+            <ol class="branch__log">
+              <li class="commit">
+                <span class="commit__hash">e0a7c9</span>
+                <span class="commit__time">09:00</span>
+                <p class="commit__msg">Workshop — Ship an Agent in 3 Hours</p>
+              </li>
+              <li class="commit">
+                <span class="commit__hash">f1b3d2</span>
+                <span class="commit__time">11:00</span>
+                <p class="commit__msg">
+                  <span class="track-dot track-dot--cloud"></span>Kubernetes
+                  Without the Yak Shave
+                </p>
+              </li>
+              <li class="commit">
+                <span class="commit__hash">a4c88f</span>
+                <span class="commit__time">14:00</span>
+                <p class="commit__msg">
+                  <span class="track-dot track-dot--aiml"></span>Debugging Model
+                  Behavior Like Code
+                </p>
+              </li>
+              <li class="commit">
+                <span class="commit__hash">b7e102</span>
+                <span class="commit__time">16:00</span>
+                <p class="commit__msg">
+                  <span class="track-dot track-dot--frontend"></span>Design
+                  Systems That Scale Teams
+                </p>
+              </li>
+            </ol>
+          </article>
+
+          <!-- DAY 03 -->
+          <article class="branch">
+            <header class="branch__head">
+              <span class="branch__day">Day 03</span>
+              <span class="branch__tag">release/finale</span>
+            </header>
+            <ol class="branch__log">
+              <li class="commit">
+                <span class="commit__hash">c9f430</span>
+                <span class="commit__time">09:00</span>
+                <p class="commit__msg">
+                  <span class="track-dot track-dot--security"></span>Breaking
+                  Your Own Auth (Ethically)
+                </p>
+              </li>
+              <li class="commit">
+                <span class="commit__hash">d2a961</span>
+                <span class="commit__time">11:00</span>
+                <p class="commit__msg">
+                  <span class="track-dot track-dot--cloud"></span>Cost
+                  Engineering for Scale-Ups
+                </p>
+              </li>
+              <li class="commit">
+                <span class="commit__hash">e5b7c8</span>
+                <span class="commit__time">13:30</span>
+                <p class="commit__msg">Panel — What Ships Next</p>
+              </li>
+              <li class="commit">
+                <span class="commit__hash">f8c012</span>
+                <span class="commit__time">16:00</span>
+                <p class="commit__msg">Closing Keynote</p>
+              </li>
+            </ol>
+          </article>
+        </div>
+
+        <!-- visual git-merge connector: three branches converging into one -->
+        <div class="lineup__connector" aria-hidden="true">
+          <span class="stem stem--1"></span>
+          <span class="stem stem--2"></span>
+          <span class="stem stem--3"></span>
+          <span class="bar"></span>
+          <span class="stem stem--merge"></span>
+        </div>
+
+        <div class="merge-banner">
+          <p class="merge-banner__cmd">
+            $ git merge day-01 day-02 day-03 → v2026.0
+          </p>
+          <p class="merge-banner__note text-muted">
+            Tagged <strong>DevConf2026-Final</strong> — the full schedule with
+            room numbers ships to registered attendees closer to the date.
+          </p>
+          <div class="merge-banner__cta">
+            <a href="#" class="btn btn--primary">Get the full schedule</a>
+            <a href="#" class="btn btn--ghost">Add to calendar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- lineup end -->
 
     <!-- footer start -->
     <footer class="footer">
