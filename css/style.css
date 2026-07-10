@@ -387,6 +387,7 @@ a {
 }
 .social-img {
   width: 3rem;
+  opacity: 0.6;
 }
 .social-link:hover {
   transform: scale(1.05);

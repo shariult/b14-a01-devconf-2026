@@ -146,4 +146,4 @@ a {
 
 Visit [This Link] (https://shariult.github.io/b14-a01-devconf-2026/) to get an idea of the current state (HTML Structure and content).
 
-I would like you to create the content and design for this section and give me the HTML and CSS.
+I would like you to create and design the content for the Schedule Section and give me the HTML and CSS.
